@@ -1,0 +1,39 @@
+[tool.poetry]
+name = "audio-llm-api"
+version = "0.1.0"
+description = ""
+authors = ["artsasсh <sashheka@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = ">=3.12,<3.14"
+fastapi = "^0.116.1"
+uvicorn = "^0.35.0"
+python-dotenv = "^1.1.1"
+requests = "^2.32.4"
+python-multipart = "^0.0.20"
+httpx = "^0.28.1"
+pydantic-settings = "^2.10.1"
+
+[tool.poetry.group.dev.dependencies]
+black = "^25.1.0"
+ruff = "^0.12.9"
+mypy = "^1.17.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.black]
+line-length = 88
+target-version = ["py312"]
+
+[tool.ruff]
+line-length = 88
+target-version = "py312"
+fix = true
+select = ["E", "F", "I"]
+
+[tool.mypy]
+python_version = "3.12"
+ignore_missing_imports = true
+strict = true
